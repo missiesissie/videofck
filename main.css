@@ -1,0 +1,537 @@
+body {
+  color: #f3f3f3;
+}
+.main-wrap {
+  background-color: #bf2074;
+}
+body.bodypinp .main-wrap {
+  background-color: #fdf6ee;
+}
+body.bodypinp .options {
+  padding-top: 15px;
+  padding-bottom: 0;
+  margin-top: -20px;
+}
+body.bodypinp .options a {
+  color: #333;
+}
+body.bodypinp #player2 iframe {
+  border-bottom-left-radius: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+}
+body.bodypinp #player1 iframe {
+  border-top-left-radius: 0.5em;
+  -moz-border-radius-topleft: 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+}
+body.bodypinp .options,
+body.bodypinp .combine {
+  display: block;
+}
+body.bodypinp .combine,
+body.bodypinp .actionbar h3,
+body.bodypinp .slidercontainer-opacity {
+  display: none;
+}
+body.blinker .options,
+body.blinker .slidercontainer-opacity {
+  display: block;
+}
+body.overlay .options,
+body.overlay .slidercontainer-opacity {
+  display: block;
+}
+body.sidebyside .options,
+body.sidebyside .slidercontainer-opacity {
+  display: block;
+}
+body.sidebyside .slidercontainer-opacity {
+  display: none;
+}
+a {
+  color: #fff;
+}
+.intro {
+  padding: 15px;
+  background: #bf2074;
+  color: #fff;
+}
+.intro p {
+  margin: 0;
+  padding: 0;
+}
+.main-wrap {
+  padding: 10px;
+
+  color: #f3f3f3;
+  margin-bottom: 130px;
+}
+input[type="text"] {
+  max-width: 550px;
+  margin-bottom: 5px;
+}
+.button-tertiary-text {
+  background-color: #fff !important;
+}
+
+.omegle-wrap {
+  display: none;
+}
+body.bodypinp .omegle-wrap {
+  display: block;
+  position: relative;
+  height: 58.3vw;
+}
+.omegle-wrap .logo {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  bottom: 67px;
+  background-image: url(https://i.imgur.com/FUU3fLP.png);
+  background-position: 10px;
+  background-repeat: no-repeat;
+  background-size: 191px;
+  box-shadow: 0 0.25em 0.75em #ccc;
+  -moz-box-shadow: 0 0.25em 0.75em #ccc;
+  -webkit-box-shadow: 0 0.25em 0.75em #ccc;
+}
+.omegle-wrap .comment {
+  background-color: white;
+  width: 45vw;
+  max-width: 700px;
+  height: calc(58vw - 90px);
+  max-height: calc(100vh - 264px);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #ccc;
+  border-top-right-radius: 0.5em;
+  -moz-border-radius-topright: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  color: #222;
+  padding: 10px;
+}
+.omegle-wrap .send-wrap {
+  width: 45vw;
+  max-width: 700px;
+  height: 75px;
+  position: absolute;
+  right: -2px;
+  bottom: -80px;
+  top: auto;
+}
+.watermark {
+  background: url(https://i.imgur.com/S2nanX5.png) left top no-repeat;
+  width: 25vw;
+  height: 6vw;
+  z-index: 9999;
+  position: absolute;
+  bottom: 0px;
+  background-size: contain;
+  opacity: 0.5;
+  left: 10px;
+  max-width: 16vw;
+}
+.main-wrap:hover .watermark {
+  bottom: auto;
+  top: 0%;
+}
+.omegle-wrap .stop {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 70px;
+  height: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  padding-top: 21px;
+  display: inline-block;
+  position: relative;
+}
+.omegle-wrap .textfield {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: calc(100% - 149px);
+  height: 100%;
+  text-align: left;
+  color: #333;
+  font-size: 14px;
+  padding-top: 0;
+  display: inline-block;
+  top: -43px;
+  position: relative;
+}
+.omegle-wrap .send {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom-right-radius: 0.5em;
+  -moz-border-radius-bottomright: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  width: 70px;
+  height: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  padding-top: 21px;
+  display: inline-block;
+}
+
+body.bodypinp .player#player1,
+body.bodypinp .player#player2 {
+  max-height: 40vh;
+  max-width: 71vh;
+  position: relative;
+  display: inline-block;
+}
+body.bodypinp .player#player1 {
+  top: 0;
+}
+body.bodypinp .player#player2 {
+  top: 10px;
+}
+body.bodypinp .video-wrap {
+  max-width: 400px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 550px) {
+  body.bodypinp .player#player2,
+  body.bodypinp .player#player1 {
+    width: 96vw;
+    height: 54.1vw;
+    position: absolute;
+  }
+  body.bodypinp .main-wrap {
+    padding: 0;
+  }
+  body.bodypinp .player#player1 {
+    top: 57vw;
+  }
+  body.bodypinp #player2 iframe,
+  body.bodypinp #player1 iframe {
+    border-radius: 0em;
+    -moz-border-radius: 0em;
+    -webkit-border-radius: 0em;
+  }
+  body.bodypinp .omegle-wrap {
+  }
+  body.bodypinp .watermark {
+    width: 30vw;
+    height: 8vw;
+    max-width: 28vw;
+  }
+  body.bodypinp .omegle-wrap .comment {
+    border-radius: 0em;
+    -moz-border-radius: 0em;
+    -webkit-border-radius: 0em;
+    width: 96vw;
+    top: 113vw;
+    right: auto;
+    left: 0;
+  }
+  body.bodypinp .omegle-wrap .send-wrap {
+    width: 96vw;
+    right: 0px;
+  }
+  body.bodypinp .omegle-wrap .send {
+    border-radius: 0em;
+    -moz-border-radius: 0em;
+    -webkit-border-radius: 0em;
+  }
+  body.bodypinp .main-wrap {
+    height: calc(210vw + 225px);
+  }
+}
+
+#video-outer-wrap {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  margin-bottom: 100px;
+  max-width: calc(150vh - 60px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.video-wrap {
+  position: relative;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+}
+.mp4video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body.split #video-outer-wrap .player {
+  position: relative;
+}
+body.blinker #player1,
+body.overlay #player1 {
+  position: absolute;
+}
+body.sidebyside #video-outer-wrap .player {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 28%;
+}
+#video-outer-wrap .player {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+body.bodypinp #video-outer-wrap {
+  margin-top: 70px;
+}
+body.bodypinp #player2 {
+  opacity: 1;
+  width: 50vw;
+  height: 28.1vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+body.bodypinp #player1 {
+  opacity: 1;
+  width: 50vw;
+  height: 28.1vw;
+  position: absolute;
+  top: 30vw;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+body.split #video-outer-wrap {
+  margin-bottom: 56.25%;
+  /* 16:9 */
+  max-width: 73vh;
+}
+body.sidebyside #video-outer-wrap {
+  margin-bottom: 56.25%;
+  /* 16:9 */
+  max-width: 100vw;
+}
+
+#player2 {
+  opacity: 1;
+}
+body.overlay #player2 {
+  opacity: 0.5;
+}
+.player {
+  position: relative;
+  display: block;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.imageplayer {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.player iframe,
+.player .videolocal,
+.player .videolocal0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.playerlocal0 {
+  z-index: 0 !important;
+}
+.combine {
+  opacity: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 28px;
+  z-index: 2;
+  position: relative;
+  height: 50px;
+}
+body.split .combine {
+  display: block;
+}
+body.split .image {
+  position: relative;
+  text-align: center;
+}
+.image img {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+}
+.red {
+  color: red;
+}
+.options {
+  display: none;
+  text-align: center;
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  49% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  49% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+/* IE */
+@-ms-keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  49% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  49% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.sharelink {
+  word-break: break-all;
+}
+
+.hidden {
+  display: none;
+}
+.slidercontainer,
+.slidercontainer-opacity {
+  text-align: center;
+}
+.slidercontainer-opacity {
+  display: none;
+}
+.slidercontainer-opacity.hidden {
+  display: none !important;
+}
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  max-width: 450px;
+  height: 25px;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  display: inline-block !important;
+}
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #4caf50;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #4caf50;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+.stepper4 {
+  display: none;
+}
+.main-wrap .stepper {
+  margin: 10px 15px;
+}
+.main-wrap .stepper .step {
+  margin-bottom: 20px;
+}

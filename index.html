@@ -1,0 +1,130 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Videofck - Fck with your mind!</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="VideoFck. Fck with your mind!" />
+  <meta property="og:description" content="VideoFck is a tool to sexualize anything. Use a youtube-video or image you found somewhere to combine it with a sexy pornhub video. Fck with your mind!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.videofck.com/" />
+  <meta property="og:image" content="https://www.videofck.com/mstile-150x150.png" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+  <div class="main-wrap">
+    <div class="intro">
+      <p>VideoFck is a tool to sexualize anything. Use a youtube-video or image you found somewhere to combine it with a sexy pornhub video. Fck with your mind!
+        UPDATE: I've added an option in beta to use local videos. Nothing will be uploaded!</p>
+    </div>
+    <div class="stepper">
+      <div class="input-wrap">
+        <div class="step">
+          <p class="step-number">1</p>
+          Paste a link to a <a href="https://www.youtube.com" target="_blank">Youtube video</a> or an image (it should end in .jpg or .png)
+          <input type="text" value="https://www.youtube.com/watch?v=4ic7RNS4Dfo&t=1s" class="videofck-input" id="input1">
+
+          or select a local video on your device (beta) <input type="file" class="videofck-input0" id="localvideoloader0" name="localvideoloader0" onChange="localshow0(this)">
+          <input type="hidden" id="localurl0" name="localurl0" />
+          <script>
+            const localshow0 = (e) => {
+              let url = URL.createObjectURL(e.files[0])
+              document.querySelector("#localurl0").setAttribute("value", url);
+            }
+          </script>
+
+        </div>
+        <div class="step">
+          <p class="step-number">2</p>
+          Find a hot video on <a href="https://www.pornhub.com/" target="_blank">PornHub</a> and paste the link to the video like below.
+          <input type="text" value="https://www.pornhub.com/view_video.php?viewkey=ph5e71a92f557da" class="videofck-input" id="input2">
+          or select a local video on your device (beta) <input type="file" class="videofck-input" id="localvideoloader" name="localvideoloader" onChange="localshow(this)">
+          <input type="hidden" id="localurl" name="localurl" />
+          <script>
+            const localshow = (e) => {
+              let url = URL.createObjectURL(e.files[0])
+              document.querySelector("#localurl").setAttribute("value", url);
+            }
+          </script>
+        </div>
+        <div class="step">
+          <p class="step-number">3</p>
+          Click on this button:
+          <button href="#" class="button-success" id="make">combine these</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-bar">
+      <div class="stepper stepper4">
+        <div class="step"><strong class="red">
+            <p class="step-number">4</p>PRESS PLAY ON THE VIDEOS AND THEN COMBINE!
+          </strong></div>
+      </div>
+      <div class="options">
+        <a href="#" id="blinker" class="button button-secondary button-small button-round">Strobe</a>
+        <a href="#" id="overlay" class="button button-secondary button-small button-round">Overlay</a>
+        <a href="#" id="sidebysideit" class="button button-secondary button-small button-round sidebyside">Side by side</a>
+        <a href="#" id="pinp" class="button button-secondary button-small button-round pinp">Omegle</a>
+        <a href="#" id="fs" class="button button-secondary button-small button-round">fullscreen</a>
+        <a href="" class="button button-secondary button-small button-round" target="_blank">Share / bookmark</a>
+        <a href="https://www.videofck.com/" target="_top" id="new" class="button button-secondary button-small button-round">Create new</a>
+      </div>
+    </div>
+    <div class="slidercontainer hidden">strobespeed:
+      <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+    </div>
+    <div class="slidercontainer-opacity">opacity:
+      <input type="range" min="1" max="10" value="5" class="slider slider-opacity" id="myRange-opacity">
+    </div>
+    <div id="video-outer-wrap" class="split">
+      <button class="combine button-primary">COMBINE</button>
+      <div class="video-wrap">
+        <div class="player" id="player1">
+        </div>
+        <div class="player" id="player2">
+        </div>
+      </div>
+      <div class="omegle-wrap">
+        <div class="logo"></div>
+        <div class="comment">You're now chatting with a random stranger.
+          <div class="send-wrap">
+            <div class="stop"><strong>Stop</strong><br />Esc</div>
+            <div class="textfield">|</div>
+            <div class="send"><strong>Send</strong><br />Enter</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="combine button-primary">COMBINE</button>
+
+    </div>
+
+  </div>
+
+  </div>
+  <div class="share"></div>
+  <input style="display:none" type="number" id="strobespeed" value="500">
+  <input style="display:none" type="text" id="opacity" value="5">
+  <input type="hidden" id="mode" name="mode" value="strobe" />
+  <style id="extrastyles">
+    body.blinker #player2 {
+      -moz-animation: blink normal 500ms infinite;
+      -webkit-animation: blink normal 500ms infinite;
+      -ms-animation: blink normal 500ms infinite;
+      animation: blink normal 500ms infinite;
+    }
+  </style>
+
+
+</body>
